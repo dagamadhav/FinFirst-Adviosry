@@ -27,16 +27,16 @@ export function Hero() {
             <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
             <span className="text-sm font-bold text-blue-800 uppercase tracking-widest">Building the Future</span>
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-6xl lg:text-8xl font-black tracking-tight text-gray-950 mb-8 leading-[1.05]"
           >
-            Strategic Capital <br/> <span className="text-blue-600">Empowering Vision.</span>
+            Strategic Capital <br /> <span className="text-blue-600">Empowering Vision</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export function Hero() {
           >
             FinFirst Advisors provides the long-term capital and 40+ years of strategic expertise founders need to build lasting institutions.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

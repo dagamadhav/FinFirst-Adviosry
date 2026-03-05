@@ -3,13 +3,14 @@ import { motion, useMotionValue, useTransform, animate, useInView } from 'motion
 import { useEffect, useRef } from 'react';
 
 const stats = [
+  { label: 'Domestic and International AIFs', value: 40, suffix: '+' },
   { label: 'Family Offices', value: 50, suffix: '+' },
   { label: 'Angel Investors', value: 200, suffix: '+' },
-  { label: 'Deals Screened/Year', value: 150, suffix: '+' },
-  { label: 'Investments', value: 11, suffix: '' },
-  { label: 'Follow-on Rounds', value: 4, suffix: '' },
-  { label: 'Network Partners', value: 30, suffix: '+' },
-  { label: 'Crores Invested', value: 20, suffix: '', prefix: 'Approx ' },
+  { label: 'Deals Screened / Year', value: 500, suffix: '+' },
+  { label: 'Success Rate', value: 95, suffix: '%' },
+  { label: 'Investments Till Date', value: 20, suffix: '+' },
+  { label: 'Follow-on Rounds via Tier 1 / 2 Funds', value: 10, suffix: '', prefix: '' },
+  { label: 'Network Partners', value: 30, suffix: '+' }
 ];
 
 function Counter({ value, duration = 2 }: { value: number; duration?: number }) {
@@ -33,12 +34,12 @@ export function Stats() {
     <section className="py-24 bg-gray-50 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">Key Milestones</h2>
+          <h1 className="text-xl font-bold tracking-widest text-blue-600 uppercase mb-6">Key Milestones</h1>
           <p className="text-3xl lg:text-4xl font-bold text-gray-900">Proven Track Record of Strategic Growth</p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8">
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -1,94 +1,186 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ExternalLink, Globe, MapPin } from 'lucide-react';
+import { ExternalLink, Globe, Grape, MapPin } from 'lucide-react';
+import ninetyone from '../assets/Portfolio/ninetyone-ktm.svg';
+import aroleap from '../assets/Portfolio/aroleap-logo.svg';
+import boba from '../assets/Portfolio/boba_bhai.png';
+import woodsmen from '../assets/Portfolio/woodsman_kv_1_2.webp';
+import falcon from '../assets/Portfolio/falcon.jpg';
+import jimmys from '../assets/Portfolio/jimmys.webp';
+import neemans from '../assets/Portfolio/neemans.jpg';
+import cradlewise from '../assets/Portfolio/cradlewise.svg';
+import aina from '../assets/Portfolio/mirage.png';
+import hoovufresh from '../assets/Portfolio/hoovufresh.avif';
+import dressfolk from '../assets/Portfolio/dressfolk1.jpg';
+import moisoi from '../assets/Portfolio/moisoi.avif';
+import goatbrand from '../assets/Portfolio/goat.png';
+import neosapien from '../assets/Portfolio/neosapein.svg';
+import magma from '../assets/Portfolio/magma.webp';
+import canvaloop from '../assets/Portfolio/canvaloop.avif';
+import bridgeup from '../assets/Portfolio/bridgeup.svg';
+import currently from '../assets/Portfolio/currently.png';
+import grapevine from '../assets/Portfolio/grapevine.jpg';
 
 const portfolioCompanies = [
   {
-    name: 'Falcon',
-    sector: 'Fintech Infrastructure',
-    description: 'End-to-end digital banking stack enabling credit cards, UPI, and embedded financial products.',
-    logo: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=100',
+    name: '91 Cycles',
+    sector: 'Active Lifestyle / Mobility',
+    description: 'Founded by Sachin Chopra and Vishal Chopra, Ninety One Cycles is a fast-growing Indian active lifestyle brand offering designed-in-India bicycles and e-bikes built for durability and performance.',
+    logo: ninetyone,
     location: 'India',
-    website: 'https://www.falconfs.com/',
-  },
-  {
-    name: 'Dressfolk',
-    sector: 'Consumer & D2C',
-    description: 'Handwoven saree marketplace connecting 800+ artisans with premium conscious fashion buyers.',
-    logo: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?q=80&w=100',
-    location: 'India',
-    website: 'https://www.dressfolk.com',
-  },
-  {
-    name: 'Woodsmen Whiskey',
-    sector: 'Premium Spirits',
-    description: 'India’s first mountain whiskey brand crafting blended whiskies designed for the Indian palate.',
-    logo: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=100',
-    location: 'India',
-    website: 'https://www.woodsmanwhisky.com',
-  },
-  {
-    name: "Jimmy’s Cocktail",
-    sector: 'FMCG Beverages',
-    description: 'Craft cocktail mixers and premium tonics making bar-quality drinks accessible at home.',
-    logo: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=100',
-    location: 'India',
-    website: 'https://drinkjimmys.com',
-  },
-  {
-    name: 'Bridge Up',
-    sector: 'Fintech & Credit',
-    description: 'Working-capital and bill-discounting platform enabling faster cash flows for businesses.',
-    logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=100',
-    location: 'India',
-    website: 'https://bridgeup.com',
+    website: 'https://www.outdoors91.com',
   },
   {
     name: 'Boba Bhai',
     sector: 'QSR & Food Brands',
-    description: 'Quick-service chain popularizing Korean burgers and bubble tea across urban India.',
-    logo: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=100',
+    description: 'Founded by Dhruv Kohli, Boba Bhai is a QSR brand focused on Korean burgers and bubble tea, rapidly expanding across urban India.',
+    logo: boba,
     location: 'India',
     website: 'https://www.bobabhai.com',
   },
   {
     name: 'Aroleap',
     sector: 'Fitness Technology',
-    description: 'Smart connected strength-training and digital fitness equipment built for Indian consumers.',
-    logo: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=100',
+    description: 'Founded by Anurag Dani and Rohit Patel, Aroleap builds India’s first digital weight and strength training equipment platform.',
+    logo: aroleap,
     location: 'India',
     website: 'https://www.aroleap.com',
   },
   {
+    name: 'Falcon',
+    sector: 'Fintech Infrastructure',
+    description: 'Founded by Priyanka Kanwar and Prabhtej Bhatia, Falcon provides fintech infrastructure enabling credit cards, UPI, savings accounts and other embedded banking services.',
+    logo: falcon,
+    location: 'India',
+    website: 'https://www.falconfs.com/',
+  },
+  {
+    name: 'Woodsmen Whiskey',
+    sector: 'Premium Spirits',
+    description: 'Founded by Shivam Ginglani, Woodsmen Whiskey is India’s first mountain whiskey brand crafting blended whiskies designed for the Indian palate.',
+    logo: woodsmen,
+    location: 'India',
+    website: 'https://www.woodsmanwhisky.com',
+  },
+  {
+    name: "Jimmy’s Cocktail",
+    sector: 'FMCG Beverages',
+    description: 'Founded by Ankur Bhatia and Nitin Bhardwaj, Jimmy’s produces premium cocktail mixers including tonic water, soda, and ginger ale.',
+    logo: jimmys,
+    location: 'India',
+    website: 'https://drinkjimmys.com',
+  },
+  {
+    name: 'Neemans',
+    sector: 'Consumer Footwear',
+    description: 'Founded by Taran Chhabra and Amarpreet Singh, Neemans is an online footwear brand offering sustainable and comfortable shoes for men and women.',
+    logo: neemans,
+    location: 'India',
+    website: 'https://neemans.com/',
+  },
+  {
+    name: 'Dressfolk',
+    sector: 'Consumer & D2C',
+    description: 'Founded by Nitin Mehrotra, Dressfolk is a handwoven saree marketplace aggregating more than 800 weavers across multiple Indian states.',
+    logo: dressfolk,
+    location: 'India',
+    website: 'https://www.dressfolk.com',
+  },
+  {
     name: 'Magma',
-    sector: 'Manufacturing Tech',
-    description: 'Digital marketplace delivering end-to-end manufacturing services for industrial supply chains.',
-    logo: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=100',
+    sector: 'Manufacturing Technology',
+    description: 'Founded by Neal Thakker, Magma is a digital marketplace offering end-to-end manufacturing services for industrial supply chains.',
+    logo: magma,
     location: 'India',
     website: 'https://www.magmagroup.in/',
   },
   {
-    name: '91 Cycles',
-    sector: 'Active Lifestyle',
-    description: 'Rapidly growing bicycle and e-bike brand focused on durable mobility solutions.',
-    logo: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=100',
-    location: 'India',
-    website: 'https://www.outdoors91.com',
-  },
-  {
     name: 'Canvaloop',
     sector: 'Sustainable Materials',
-    description: 'Manufacturer of eco-friendly textile fibers from agricultural waste like hemp and flax.',
-    logo: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=100',
+    description: 'Founded by Shreyans Kokra and Dhruv Gupta, Canvaloop manufactures sustainable textile fibers from hemp and flax.',
+    logo: canvaloop,
     location: 'India',
-    website: 'https://www.canvaloop.com'}
+    website: 'https://www.canvaloop.com',
+  },
+  {
+    name: 'Grapevine',
+    sector: 'Community Platform',
+    description: 'Founded by Jainam Talsania, Saumil Tripathi and Shreeyash Dharmadhikari, Grapevine is a community platform for salary transparency and career discussions.',
+    logo: grapevine,
+    location: 'India',
+    website: 'https://www.grapevine.in/home',
+  },
+  {
+    name: 'Bridge Up',
+    sector: 'Fintech & Credit',
+    description: 'Founded by Zeus Dhanbhoora and Dipen Shah, BridgeUp provides bill discounting and account aggregation financial products.',
+    logo: bridgeup,
+    location: 'India',
+    website: 'https://bridgeup.com',
+  },
+  {
+    name: 'Hoovu Fresh',
+    sector: 'Consumer Products',
+    description: 'Founded by Yeshoda Karuturi, Hoovu Fresh delivers fresh pooja flowers and produces incense sticks from recycled temple flowers.',
+    logo: hoovufresh,
+    location: 'India',
+    website: 'https://www.hoovufresh.com',
+  },
+  {
+    name: 'Neosapien',
+    sector: 'Wearable Technology',
+    description: 'Founded by Dhananjay Yadav, Neosapien builds wearable devices designed to help manage habits and productivity.',
+    logo: neosapien,
+    location: 'India',
+    website: 'https://neosapien.xyz/',
+  },
+  {
+    name: 'Currently',
+    sector: 'Social Networking',
+    description: 'Founded by Mitesh Shethwala, Currently is a social networking platform focused on enabling real connections.',
+    logo: currently,
+    location: 'India',
+    website: 'https://currently.club/',
+  },
+  {
+    name: 'Moi Soi',
+    sector: 'Food & FMCG',
+    description: 'Founded by Deb Mukherjee, Moi Soi produces instant meals, noodles and Asian sauces for Indian consumers.',
+    logo: moisoi,
+    location: 'India',
+    website: 'https://www.moisoi.in/',
+  },
+  {
+    name: 'Goat Brand Labs',
+    sector: 'D2C Brand Builder',
+    description: 'Founded by Rishi Vasudev, Goat Brand Labs acquires and scales category-defining D2C brands.',
+    logo: goatbrand,
+    location: 'India',
+    website: 'https://www.goatbrandlabs.com',
+  },
+  {
+    name: 'Cradlewise',
+    sector: 'Consumer Hardware',
+    description: 'Founded by Radhika and Bharath Patil, Cradlewise builds intelligent baby cribs designed to improve sleep for babies and parents.',
+    logo: cradlewise,
+    location: 'India',
+    website: 'https://cradlewise.com',
+  },
+  {
+    name: 'Aina',
+    sector: 'AI + Hardware',
+    description: 'Founded by Apoorv Shankar, Aina is building technology in the AI and hardware space focused on redefining intelligent living environments.',
+    logo: aina,
+    location: 'India',
+    website: 'https://www.projectmirage.ai/',
+  }
 ];
 
 export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onContact: () => void }) {
   return (
     <div className="pt-32 pb-24 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
-        <button 
+        <button
           onClick={onBack}
           className="mb-12 text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center transition-colors group"
         >
@@ -105,7 +197,7 @@ export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onCon
             <span>Active Portfolio</span>
           </div>
           <h1 className="text-5xl lg:text-8xl font-black tracking-tight text-gray-900 mb-8 leading-tight">
-            The Companies <br/> <span className="text-blue-600">Building the Future.</span>
+            The Companies <br /> <span className="text-blue-600">Building the Future.</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
             We partner with visionary founders across high-growth sectors, providing strategic capital and operational expertise to help them scale into industry leaders.
@@ -120,32 +212,47 @@ export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onCon
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="p-10 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-2xl transition-all group flex flex-col h-full"
+              className="flip-card cursor-pointer"
+              style={{ perspective: '1000px' }}
+              onClick={() => window.open(company.website, '_blank', 'noopener,noreferrer')}
             >
-              <div className="flex-grow">
-                <div className="mb-4">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 mb-2 block">
-                    {company.sector}
-                  </span>
-                  <h3 className="text-2xl font-bold text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">
-                    {company.name}
-                  </h3>
+              <div className="flip-card-inner">
+                {/* FRONT — logo only */}
+                <div className="flip-card-front rounded-[3rem] border border-gray-100 bg-gray-50/50 p-10 flex items-center justify-center">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="w-[80%] h-[80%] object-contain"
+                  />
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-10">
-                  {company.description}
-                </p>
-              </div>
 
-              <div className="pt-8 border-t border-gray-100">
-                <a 
-                  href={company.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-black text-gray-900 hover:text-blue-600 transition-colors group/link uppercase tracking-wider"
-                >
-                  Visit Website
-                  <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                </a>
+                {/* BACK — existing card content */}
+                <div className="flip-card-back rounded-[3rem] border border-gray-100 bg-white shadow-2xl p-10 flex flex-col">
+                  <div className="flex-grow">
+                    <div className="mb-4">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 mb-2 block">
+                        {company.sector}
+                      </span>
+                      <h3 className="text-2xl font-bold text-gray-900 tracking-tight">
+                        {company.name}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                      {company.description}
+                    </p>
+                    <div className="flex items-center text-xs text-gray-400">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      {company.location}
+                    </div>
+                  </div>
+
+                  <div className="pt-8 border-t border-gray-100">
+                    <span className="inline-flex items-center text-sm font-black text-gray-900 uppercase tracking-wider">
+                      Visit Website
+                      <ExternalLink className="ml-2 w-4 h-4" />
+                    </span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -157,7 +264,7 @@ export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onCon
           <p className="text-gray-400 max-w-xl mx-auto mb-10 relative z-10 text-lg">
             We are always looking for founders who are building the next generation of category-defining companies.
           </p>
-          <button 
+          <button
             onClick={onContact}
             className="px-10 py-4 bg-white text-gray-900 font-bold rounded-2xl hover:bg-blue-50 hover:scale-105 transition-all relative z-10 shadow-2xl"
           >

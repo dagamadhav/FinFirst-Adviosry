@@ -11,7 +11,7 @@ export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) 
     { name: 'Portfolio', href: '#portfolio', page: 'portfolio' },
     { name: 'Service Partners', href: '#service-partners', page: 'service-partners' },
     { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' },
+    // { name: 'Contact', href: '#contact' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, link: any) => {
@@ -31,7 +31,7 @@ export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) 
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/100 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <button 
+          <button
             onClick={() => onNavigate?.('home')}
             className="hover:opacity-80 transition-opacity"
           >

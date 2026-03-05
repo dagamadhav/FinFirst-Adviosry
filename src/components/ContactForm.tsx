@@ -13,8 +13,24 @@ export function ContactForm() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
-    console.log('Pitch Submitted:', data);
-    toast.success('Pitch submitted successfully! Our team will reach out soon.');
+    const subject = encodeURIComponent(`Startup Pitch: ${data.companyName}`);
+
+    const body = encodeURIComponent(
+      `Company Name: ${data.companyName}
+
+Website / Deck: ${data.website}
+
+Founder Email: ${data.email}
+
+Story & Vision:
+${data.pitch}`
+    );
+
+    const mailtoLink = `mailto:dagamadhav1@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+
+    toast.success('Opening your email client...');
     reset();
   };
 
