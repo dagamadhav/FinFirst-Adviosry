@@ -32,7 +32,10 @@ export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) 
       <div className="max-w-7xl mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
         <div className="flex items-center">
           <button
-            onClick={() => onNavigate?.('home')}
+            onClick={() => {
+              onNavigate?.('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="hover:opacity-80 transition-opacity"
           >
             <img

@@ -9,7 +9,7 @@ const stats = [
   { label: 'Deals Screened / Year', value: 500, suffix: '+' },
   { label: 'Success Rate', value: 95, suffix: '%' },
   { label: 'Investments Till Date', value: 20, suffix: '+' },
-  { label: 'Follow-on Rounds via Tier 1 / 2 Funds', value: 10, suffix: '', prefix: '' },
+  { label: 'Follow-on Rounds via Tier 1 / 2 Funds', value: 7, suffix: '', prefix: '' },
   { label: 'Network Partners', value: 30, suffix: '+' }
 ];
 

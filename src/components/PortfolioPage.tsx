@@ -4,10 +4,10 @@ import { ExternalLink, Globe, Grape, MapPin } from 'lucide-react';
 import ninetyone from '../assets/Portfolio/ninetyone-ktm.svg';
 import aroleap from '../assets/Portfolio/aroleap-logo.svg';
 import boba from '../assets/Portfolio/boba_bhai.png';
-import woodsmen from '../assets/Portfolio/woodsman_kv_1_2.webp';
+import woodsmen from '../assets/Portfolio/woodsman1.jpg';
 import falcon from '../assets/Portfolio/falcon.jpg';
 import jimmys from '../assets/Portfolio/jimmys.webp';
-import neemans from '../assets/Portfolio/neemans.jpg';
+import neemans from '../assets/Portfolio/neemans1.jpg';
 import cradlewise from '../assets/Portfolio/cradlewise.svg';
 import aina from '../assets/Portfolio/mirage.png';
 import hoovufresh from '../assets/Portfolio/hoovufresh.avif';
@@ -17,7 +17,7 @@ import goatbrand from '../assets/Portfolio/goat.png';
 import neosapien from '../assets/Portfolio/neosapein.svg';
 import magma from '../assets/Portfolio/magma.webp';
 import canvaloop from '../assets/Portfolio/canvaloop.avif';
-import bridgeup from '../assets/Portfolio/bridgeup.svg';
+import bridgeup from '../assets/Portfolio/bridge_up.jpg';
 import currently from '../assets/Portfolio/currently.png';
 import grapevine from '../assets/Portfolio/grapevine.jpg';
 
@@ -194,7 +194,7 @@ export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onCon
         >
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-6">
             <Globe className="w-3 h-3" />
-            <span>Active Portfolio</span>
+            <span>Companies we work with</span>
           </div>
           <h1 className="text-5xl lg:text-8xl font-black tracking-tight text-gray-900 mb-8 leading-tight">
             The Companies <br /> <span className="text-blue-600">Building the Future.</span>

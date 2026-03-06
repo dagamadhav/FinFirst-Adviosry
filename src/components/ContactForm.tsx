@@ -26,7 +26,7 @@ Story & Vision:
 ${data.pitch}`
     );
 
-    const mailtoLink = `mailto:dagamadhav1@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:Pallavi@finfirstadvisors.com?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoLink;
 

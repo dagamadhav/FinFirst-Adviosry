@@ -26,7 +26,7 @@ export function Footer({ onNavigate }: { onNavigate?: (page: string) => void }) 
             </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/company/finfirstadvisors/posts/?feedView=all" className="text-gray-400 hover:text-gray-900 transition-colors"><Linkedin /></a>
-              <a href="mailto:[pdaga211@gmail.com]" className="text-gray-400 hover:text-gray-900 transition-colors"><Mail /></a>
+              <a href="mailto:[Admin@finfirstadvisors.com]" className="text-gray-400 hover:text-gray-900 transition-colors"><Mail /></a>
 
             </div>
           </div>

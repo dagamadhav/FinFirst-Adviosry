@@ -28,7 +28,7 @@ export function Team() {
   const prev = () => setIndex((prev) => (prev - 1 + team.length) % team.length);
 
   useEffect(() => {
-    const timer = setInterval(next, 7500);
+    const timer = setInterval(next, 17500);
     return () => clearInterval(timer);
   }, []);
 
