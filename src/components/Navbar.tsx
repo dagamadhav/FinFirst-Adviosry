@@ -10,7 +10,7 @@ export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) 
     { name: 'About', href: '#about', page: 'about' },
     { name: 'Portfolio', href: '#portfolio', page: 'portfolio' },
     { name: 'Service Partners', href: '#service-partners', page: 'service-partners' },
-    { name: 'Team', href: '#team' },
+    // { name: 'Team', href: '#team' },
     // { name: 'Contact', href: '#contact' },
   ];
 

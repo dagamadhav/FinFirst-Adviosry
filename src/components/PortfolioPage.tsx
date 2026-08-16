@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ExternalLink, Globe, Grape, MapPin } from 'lucide-react';
+import { ExternalLink, Globe, Grape, MapPin, Handshake } from 'lucide-react';
 import ninetyone from '../assets/Portfolio/ninetyone-ktm.svg';
 import aroleap from '../assets/Portfolio/aroleap-logo.svg';
 import boba from '../assets/Portfolio/boba_bhai.png';
@@ -12,7 +12,7 @@ import cradlewise from '../assets/Portfolio/cradlewise.svg';
 import aina from '../assets/Portfolio/mirage.png';
 import hoovufresh from '../assets/Portfolio/hoovufresh.avif';
 import dressfolk from '../assets/Portfolio/dressfolk1.jpg';
-import moisoi from '../assets/Portfolio/moisoi.avif';
+// import moisoi from '../assets/Portfolio/moisoi.avif';
 import goatbrand from '../assets/Portfolio/goat.png';
 import neosapien from '../assets/Portfolio/neosapein.svg';
 import magma from '../assets/Portfolio/magma.webp';
@@ -143,12 +143,20 @@ const portfolioCompanies = [
     website: 'https://currently.club/',
   },
   {
-    name: 'Moi Soi',
-    sector: 'Food & FMCG',
-    description: 'Founded by Deb Mukherjee, Moi Soi produces instant meals, noodles and Asian sauces for Indian consumers.',
-    logo: moisoi,
+    name: 'India Global Review',
+    sector: 'Media & Publishing',
+    description: 'India Global Review is a platform dedicated to providing in-depth analysis and commentary on India\'s role in global affairs, policy, and economics.',
+    logo: '', // placeholder — no logo asset yet
     location: 'India',
-    website: 'https://www.moisoi.in/',
+    website: 'https://www.youtube.com/@IndiaGlobalReview',
+  },
+  {
+    name: 'Gravity',
+    sector: 'Real Estate & Design',
+    description: 'Founded by the Livspace co-founders, Gravity is redefining real estate and design-led living spaces with technology-driven solutions.',
+    logo: '', // placeholder — no logo asset yet
+    location: 'India',
+    website: '#',
   },
   {
     name: 'Goat Brand Labs',
@@ -219,11 +227,15 @@ export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onCon
               <div className="flip-card-inner">
                 {/* FRONT — logo only */}
                 <div className="flip-card-front rounded-[3rem] border border-gray-100 bg-gray-50/50 p-10 flex items-center justify-center">
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="w-[80%] h-[80%] object-contain"
-                  />
+                  {company.logo ? (
+                    <img
+                      src={company.logo}
+                      alt={company.name}
+                      className="w-[80%] h-[80%] object-contain"
+                    />
+                  ) : (
+                    <span className="text-2xl font-bold text-gray-900 text-center">{company.name}</span>
+                  )}
                 </div>
 
                 {/* BACK — existing card content */}
@@ -257,6 +269,66 @@ export function PortfolioPage({ onBack, onContact }: { onBack: () => void; onCon
             </motion.div>
           ))}
         </div>
+
+        {/* ── Partner Funds ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32 mb-16"
+        >
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-6">
+            <Handshake className="w-3 h-3" />
+            <span>Partner Funds</span>
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-black tracking-tight text-gray-900 mb-4">
+            Funds We <span className="text-blue-600">Partner With.</span>
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mb-16">
+            We collaborate with leading venture capital firms to co-invest and support exceptional founders.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Parth VC',
+                description: 'An early-stage venture capital fund backing ambitious founders building category-defining companies.',
+                website: 'https://www.prathventures.com/',
+              },
+              {
+                name: 'Sauce.vc',
+                description: 'An early-stage consumer-focused fund investing in brands that are reshaping how India eats, drinks, and lives.',
+                website: 'https://www.sauce.vc/',
+              },
+              {
+                name: 'Shastra VC',
+                description: 'A venture capital firm backing visionary entrepreneurs with a thesis-driven approach to early-stage investing.',
+                website: 'https://www.shastra.vc/',
+              },
+            ].map((fund, i) => (
+              <motion.div
+                key={fund.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                onClick={() => window.open(fund.website, '_blank', 'noopener,noreferrer')}
+                className="cursor-pointer rounded-[2rem] border border-gray-100 bg-gray-50/50 p-10 hover:shadow-xl hover:border-blue-100 transition-all group"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  {fund.name}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                  {fund.description}
+                </p>
+                <span className="inline-flex items-center text-sm font-black text-gray-900 uppercase tracking-wider group-hover:text-blue-600 transition-colors">
+                  Visit Website
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         <div className="mt-32 p-12 lg:p-20 bg-gray-900 rounded-[4rem] text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -mr-48 -mt-48" />

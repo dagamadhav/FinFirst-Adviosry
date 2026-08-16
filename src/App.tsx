@@ -4,7 +4,7 @@ import { Hero } from './components/Hero';
 import { Stats } from './components/Stats';
 import { FocusAreas } from './components/FocusAreas';
 import { WhyUs } from './components/WhyUs';
-import { Team } from './components/Team';
+// import { Team } from './components/Team';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 import { AboutPage } from './components/AboutPage';
@@ -54,7 +54,7 @@ export default function App() {
             <Stats />
             <FocusAreas onNavigate={setCurrentPage} />
             <WhyUs />
-            <Team onNavigate={setCurrentPage} />
+            {/* <Team onNavigate={setCurrentPage} /> */}
             <ContactForm />
           </>
         );

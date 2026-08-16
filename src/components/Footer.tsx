@@ -51,7 +51,7 @@ export function Footer({ onNavigate }: { onNavigate?: (page: string) => void }) 
                   Portfolio
                 </a>
               </li>
-              <li><a href="#team" className="text-gray-600 hover:text-gray-900 transition-colors">Team</a></li>
+              {/* <li><a href="#team" className="text-gray-600 hover:text-gray-900 transition-colors">Team</a></li> */}
             </ul>
           </div>
           <div>
