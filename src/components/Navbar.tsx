@@ -1,31 +1,49 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import finFirstLogo from "../assets/finFirstLogo.png";
-
+import { investmentAreas, scrollToService } from "../data/homeContent";
 
 export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { name: 'About', href: '#about', page: 'about' },
     { name: 'Portfolio', href: '#portfolio', page: 'portfolio' },
     { name: 'Service Partners', href: '#service-partners', page: 'service-partners' },
-    // { name: 'Team', href: '#team' },
-    // { name: 'Contact', href: '#contact' },
   ];
 
-  const handleLinkClick = (e: React.MouseEvent, link: any) => {
+  const handleLinkClick = (e: React.MouseEvent, link: { name: string; href: string; page?: string }) => {
     if (link.page && onNavigate) {
       e.preventDefault();
       onNavigate(link.page);
       setIsOpen(false);
+      setServicesOpen(false);
     } else if (link.href.startsWith('#') && onNavigate) {
-      // If we are on a different page, go home first
       onNavigate('home');
       setIsOpen(false);
-      // Let the default anchor behavior (or a timeout) handle the scroll
     }
   };
+
+  const handleServiceClick = (index: number) => {
+    scrollToService(index, onNavigate);
+    setServicesOpen(false);
+    setMobileServicesOpen(false);
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/100 backdrop-blur-md border-b border-gray-100">
@@ -58,6 +76,35 @@ export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) 
               {link.name}
             </a>
           ))}
+
+          <div className="relative" ref={servicesRef}>
+            <button
+              type="button"
+              onClick={() => setServicesOpen((open) => !open)}
+              className="inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+            >
+              Our Services
+              <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {servicesOpen && (
+              <div className="absolute top-full right-0 mt-3 w-72 rounded-2xl border border-gray-100 bg-white py-2 shadow-xl">
+                {investmentAreas.map((service, index) => (
+                  <button
+                    key={service.id}
+                    type="button"
+                    onClick={() => handleServiceClick(index)}
+                    className="block w-full px-4 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                  >
+                    {service.title}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           <a
             href="#contact"
             onClick={(e) => {
@@ -99,6 +146,34 @@ export function Navbar({ onNavigate }: { onNavigate?: (page: string) => void }) 
               {link.name}
             </a>
           ))}
+
+          <div>
+            <button
+              type="button"
+              onClick={() => setMobileServicesOpen((open) => !open)}
+              className="flex w-full items-center justify-between text-lg font-medium text-gray-900"
+              aria-expanded={mobileServicesOpen}
+            >
+              Our Services
+              <ChevronDown className={`w-5 h-5 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {mobileServicesOpen && (
+              <div className="mt-3 ml-2 flex flex-col space-y-2 border-l-2 border-gray-100 pl-4">
+                {investmentAreas.map((service, index) => (
+                  <button
+                    key={service.id}
+                    type="button"
+                    onClick={() => handleServiceClick(index)}
+                    className="text-left text-base font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    {service.title}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           <a
             href="#contact"
             onClick={(e) => {
