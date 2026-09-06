@@ -1,7 +1,7 @@
 import React from "react";
 
-import { NetworkSection } from "./NetworkSection";
 import { ServicesSection } from "./ServicesSection";
+// import { NetworkSection } from "./NetworkSection";
 
 /**
  * New home layout: services carousel + static network grid.
@@ -24,7 +24,7 @@ export function HomeSections({
   return (
     <>
       <ServicesSection onNavigate={onNavigate} />
-      <NetworkSection onNavigate={onNavigate} />
+      {/* <NetworkSection onNavigate={onNavigate} /> */}
     </>
   );
 }
